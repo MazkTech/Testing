@@ -1,4 +1,8 @@
-
+def CalculatePrice():
+      print("-" * 50)
+      print("Ticket Price Calculator")
+      print("-" * 50)
+      int(input("Enter Ticket Option (1- Weekday,2 - Weekend, 3 - Twilight)"))
 def menu():
     strChoice =""
     while strChoice != "X":
@@ -45,10 +49,6 @@ def CalcServiceFee(subtotal):
     return subtotal*.07
        
         
-def CalculatePrice():
-      print("-" * 50)
-      print("Ticket Price Calculator")
-      print("-" * 50)
-      int(input("Enter Ticket Option (1- Weekday,2 - Weekend, 3 - Twilight)"))
+
         
 menu()
