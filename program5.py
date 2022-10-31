@@ -1,8 +1,8 @@
-def CalculatePrice():
-      print("-" * 50)
-      print("Ticket Price Calculator")
-      print("-" * 50)
-      int(input("Enter Ticket Option (1- Weekday,2 - Weekend, 3 - Twilight)"))
+weekday = 38.00
+weekend = 42.00
+twilight = 24.00
+fltsubtotal = 0.00
+fltservicefee = 0.7
 def menu():
     strChoice =""
     while strChoice != "X":
@@ -16,39 +16,35 @@ def menu():
         strChoice = input("What would you like to do?: ").upper()
         print()
         # user choice
-        if strChoice == "C": #calc ticket cost
-           CalculatePrice()
-        elif strChoice == "D": #Ticket options
-            DisplayOptions() #calls for ticket options 
-
-    
-        else:
-            subtotal=CalculatePrice()
-            servicefee=CalcServiceFee(subtotal)
-            total=subtotal+servicefee
-            print("\nCost $")
-            if input("\nPress enter to con"):
-                return
+        if strChoice == "C": 
+            CalculatePrice()
+        elif strChoice == "D": 
+            DisplayOptions() 
 
 def DisplayOptions():
-    #blank spaces
     print("-" * 50)
-    #display itcket options
     print("Ticket Options")
     print("-" * 50)
     print()
-    #display prices for tickets
     print("Weekday     38.00")
     print("Weekend     42.00")
     print("Twilight    24.00")
-    #user input
     print()
     input("Please press enter to return to the menu:")
-#Funtion that gets service fee
-def CalcServiceFee(subtotal):
-    return subtotal*.07
-       
-        
 
-        
+def CalcServiceFee(subtotal):
+    ServiceFee = .07
+    return subtotal * ServiceFee
+def CalculatePrice():
+    print("-" * 50)
+    print("Ticket Price Calculator")
+    print("-" * 50)
+    print()
+    print("Weekday     38.00")
+    print("Weekend     42.00")
+    print("Twilight    24.00")
+    print()
+    input("What ticket would you like?:")
+    if input == 1:
+        print( (weekend * fltservicefee))
 menu()
